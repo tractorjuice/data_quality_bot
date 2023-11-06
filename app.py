@@ -87,7 +87,7 @@ if user_openai_api_key:
                     for m in st.session_state.messages
                 ],
                 stream=True,
-                pl_tags=["learnwardleymapping", st.session_state.session_id],
+                pl_tags=["dataquality-bot", st.session_state.session_id],
             ):
                 full_response += response.choices[0].delta.get("content", "")
                 message_placeholder.markdown(full_response + "▌")
